@@ -1,23 +1,5 @@
-Name GyroPenguin
-OutFile ../Gyropenguin-win.exe
-LicenseData license.txt
+!define APP_NAME "GyroPenguin"
+!define APP_VERSION "1.0"
+!define APP_PUBLISHER "Penguin Technology"
+!define APP_DEFAULT_INSTALL_DIR $PROGRAMFILES\${APP_NAME}.exe
 
-SetCompress auto 
-
-InstallDir $PROGRAMFILES\GyroPenguin 
-
-Page license
-Page directory 
-Page instfiles 
-
-Section "Copy Files"
-SetOutPath $INSTDIR
-File GyroPenguin.exe 
-File GyroPenguin.exe.manifiest 
-
-File *.dll 
-File main.py
-File license.txt
-
-SetOutPath $INSTDIR\data 
-File /r /x .svn data/*.*
